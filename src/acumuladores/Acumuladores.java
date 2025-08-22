@@ -13,8 +13,29 @@ public class Acumuladores {
 	 * @param num
 	 * @return
 	 */
-	public boolean todosMultiplosEnAlgunaFila(int[][] mat, int num) { 
-		throw new RuntimeException("Metodo no implementado aun!!!");
+	public boolean todosMultiplosEnAlgunaFila(int[][] mat, int num) {
+		
+		if(mat.length == 0 || num < 0)return false;
+		
+		boolean acumulador = true;
+		
+		for(var i = 0; i< mat.length; i++ ) {
+			
+			acumulador = true;
+			
+			int[] fila = mat[i];
+			
+			for(var j = 0; j<fila.length ; j++) {
+				
+				acumulador = acumulador && (j % num == 0);
+				
+			}
+			if(acumulador) break;
+		}
+		
+		return acumulador;
+		
+		
 	}
 	
 	/**
