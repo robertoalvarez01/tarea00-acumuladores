@@ -14,6 +14,7 @@ public class Acumuladores {
 	 * @return
 	 */
 	public boolean todosMultiplosEnAlgunaFila(int[][] mat, int num) {
+
 		
 		if(mat.length == 0 || num < 0)return false;
 		
